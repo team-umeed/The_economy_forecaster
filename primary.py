@@ -77,7 +77,7 @@ def call13():
 	root.destroy()
 def call14():
 
-	os.system('python wood1.py')
+	os.system('python salts1.py')
 	root.destroy()
 def call15():
 
