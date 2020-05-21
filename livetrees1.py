@@ -4,6 +4,7 @@ from tkinter import messagebox
 import os
 
 root = tk.Tk()
+root.attributes('-fullscreen', True)
 canvas1=tk.Canvas(root,width=1280,height=720)
 canvas1.pack()
 logo=ImageTk.PhotoImage(file=r'livetrees1.png')
