@@ -30,7 +30,7 @@ test = airline.iloc[len(airline)-12:] # set one year(12 months) for testing
 from statsmodels.tsa.statespace.sarimax import SARIMAX 
 
 model = SARIMAX(train['#Passengers'], 
-        order = (0, 1, 1), 
+        order = (3, 1, 2), 
         seasonal_order =(2, 1, 1, 12)) 
 
 result = model.fit() 
@@ -44,7 +44,7 @@ predictions = result.predict(start, end,
   
 # Train the model on the full dataset 
 model = model = SARIMAX(airline['#Passengers'],  
-                        order = (0, 1, 1),  
+                        order = (3, 1, 2),  
                         seasonal_order =(2, 1, 1, 12)) 
 result = model.fit() 
   
