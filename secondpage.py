@@ -26,6 +26,7 @@ def callx():
 	root.destroy()
 def callback():
 	webbrowser.open_new('https://umeedeconomyforecaster.000webhostapp.com/')
+	root.destroy()
 
 
     
