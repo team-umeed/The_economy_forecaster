@@ -25,13 +25,12 @@ warnings.filterwarnings("ignore")
 # Split data into train / test sets 
 train = airline.iloc[:len(airline)-12] 
 test = airline.iloc[len(airline)-12:] # set one year(12 months) for testing 
-
-# Fit a SARIMAX(0, 1, 1)x(2, 1, 1, 12) on the training set 
 from statsmodels.tsa.statespace.sarimax import SARIMAX 
+  
+model = SARIMAX(train['#Passengers'],  
+                order = (1, 1, 2),  
+                seasonal_order =(2, 1, 1, 12)) 
 
-model = SARIMAX(train['#Passengers'], 
-        order = (0, 1, 1), 
-        seasonal_order =(2, 1, 1, 12)) 
 
 result = model.fit() 
 result.summary() 
@@ -44,7 +43,7 @@ predictions = result.predict(start, end,
   
 # Train the model on the full dataset 
 model = model = SARIMAX(airline['#Passengers'],  
-                        order = (0, 1, 1),  
+                        order = (1, 1, 2),  
                         seasonal_order =(2, 1, 1, 12)) 
 result = model.fit() 
   
@@ -53,15 +52,8 @@ forecast = result.predict(start = len(airline),
                           end = (len(airline)-1) + 12,  
                           typ = 'levels').rename('Forecast') 
 rmse(test["#Passengers"], predictions) 
-mean_squared_error(test["#Passengers"], predictions) 
-
-  
-# Plot the forecast values 
-#airline['#Passengers'].plot(figsize = (12, 5), legend = True) 
-#forecast.plot(legend = True)
-
 plt.plot(airline['#Passengers'])
 plt.xlabel('Number of People')
 plt.ylabel('Expenses')
-plt.plot(forecast*0.875)
+plt.plot(forecast)
 plt.show()
