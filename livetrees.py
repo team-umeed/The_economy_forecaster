@@ -4,7 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 from statsmodels.tsa.seasonal import seasonal_decompose 
 from sklearn.metrics import mean_squared_error 
-from statsmodels.tools.eval_measures import rmseimport os
+from statsmodels.tools.eval_measures import rmse
 import numpy as np 
 import pandas as pd 
 import matplotlib.pyplot as plt 
