@@ -27,7 +27,7 @@ train = airline.iloc[:len(airline)-12]
 test = airline.iloc[len(airline)-12:] # set one year(12 months) for testing 
 from statsmodels.tsa.statespace.sarimax import SARIMAX 
   
-model = SARIMAX(train['# Passengers'],  
+model = SARIMAX(train['#Passengers'],  
                 order = (0, 1, 1),  
                 seasonal_order =(2, 1, 1, 12)) 
 
