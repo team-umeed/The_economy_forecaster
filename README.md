@@ -8,19 +8,20 @@ We have used the ARIMA model, PYTHON language, WEB development, Watson assistant
 Installation: 
 Go to command prompt
 
-clone the repository by: git clone https://github.com/team-umeed/The_economy_forecaster
+clone the repository by  this command: git clone https://github.com/team-umeed/The_economy_forecaster
 
-install all the requirements by this command: pip install -r requiremnts.txt
+install all the required modules to run the program by this command: pip install -r requiremnts.txt
 
 in command prompt enter this command: python welcome.py
+
 it will show you the interface screen
 
 
 You can explore through the interference and can click on commodity to get information and to get a graph trends from that particular section Primary and Farming, there is also a button for our website which will open our wensite where you will get more details about our project and there is KRISHAK THE BOT to help you out which can guide you and can give you the graphs of commodities
 
 This Project is made by a team of 4 young engineering students
-Saswat Pandey
-Shraddha Sahay
-Pratik Kumar Mishra
+Saswat Pandey,
+Shraddha Sahay,
+Pratik Kumar Mishra,
 Kunal Shekhar
 
