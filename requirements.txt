@@ -2,7 +2,7 @@ Eel==0.11.0
 six==1.10.0
 os-sys==2.1.4
 Pillow>=6.2.2
-numpy==1.18.4
+numpy==1.22.0
 matplotlib==3.2.1
 statsmodels==0.11.1
 scikit-learn==0.23.1
